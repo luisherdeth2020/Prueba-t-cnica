@@ -114,23 +114,23 @@ function App() {
 							<div className={styles.list}>
 								{data.map((item) => (
 									<div key={item.id} className={styles.list__description}>
-										<div className={selected.some((check) => check.id === item.id) ? 'isActive' : ''}>
-											<div>
-												<input
-													className={styles.list__check}
-													type="checkbox"
-													checked={selected.some((check) => check.id === item.id)}
-													value={item.id}
-													onChange={(e) => handleChange(e.target.value)}
-												/>
-												{item.description}
-											</div>
-											{selected.some((check) => check.id === item.id) ? (
-												<div className={styles.list__check}>✔</div>
-											) : (
-												''
-											)}
-										</div>
+										<label className={selected.some((check) => check.id === item.id) ? 'isActive' : ''}>
+												<div>
+													<input
+														className={styles.list__check}
+														type="checkbox"
+														checked={selected.some((check) => check.id === item.id)}
+														value={item.id}
+														onChange={(e) => handleChange(e.target.value)}
+													/>
+													{item.description}
+												</div>
+												{selected.some((check) => check.id === item.id) ? (
+													<div className={styles.list__check}>✔</div>
+												) : (
+													''
+												)}
+										</label>
 									</div>
 								))}
 							</div>
