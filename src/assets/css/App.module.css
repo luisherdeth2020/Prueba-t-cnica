@@ -1,28 +1,22 @@
 .container {
-	border-radius: 1em;
-	-webkit-border-radius: 1em;
-	-moz-border-radius: 1em;
-	-ms-border-radius: 1em;
-	-o-border-radius: 1em;
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
 	padding: 1em;
-
 }
 
 .search__box {
-    background-color: #fff;
-    border: none;
-    border-radius: 1em;
-    -webkit-border-radius: 1em;
-    -moz-border-radius: 1em;
-    -ms-border-radius: 1em;
-    -o-border-radius: 1em;
-    padding: 0.5em;
-    position: relative;
-    width: 240px;
-    outline: none;
+	background-color: #fff;
+	border: none;
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	padding: 0.5em;
+	position: relative;
+	width: 240px;
+	outline: none;
 }
 .search__input {
 	background-color: #eef2f681;
@@ -40,11 +34,17 @@
 	padding: 0.8rem 1.3rem;
 	outline: none;
 }
-
+.container__number {
+	align-items: center;
+	display: flex;
+	font-size: 0.7rem;
+	justify-content: space-between;
+	width: 40%;
+}
 .search__button {
 	background: transparent;
 	border: none;
-	bottom: 212px;
+	bottom: 197px;
 	cursor: pointer;
 	position: absolute;
 	right: 22px;
@@ -55,12 +55,19 @@
 	padding: 0.7em 0.5rem;
 }
 .list__check {
+	margin-right: 0.5em;
 	text-align: right;
 }
 .container__btn {
+	background-color: #fff;
+	color: #213547;
+	display: flex;
+	justify-content: space-between;
 	width: 256px;
-	color:#213547;
 }
-.list__check {
-	margin-right: 0.5em;
+
+.isActive {
+	color: #4873fe;
+	display: flex;
+	justify-content: space-between;
 }

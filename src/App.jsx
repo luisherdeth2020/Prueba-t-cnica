@@ -64,16 +64,31 @@ function App() {
 						Select your options
 					</button>
 				) : selected.length > 1 ? (
-					<div>
+					<section>
 						<button
 							className={styles.container__btn}
 							onClick={() => {
 								setVisible(!visible);
 							}}
 						>
-							{selected[0].description} & {selected.length - 1 + ' MORE'}
+							{selected[0].description}{' '}
+							<div className={styles.container__number}>
+								& {selected.length - 1 + ' MORE'}
+								<svg
+									fill="#EFF2F6"
+									width="19px"
+									height="19px"
+									viewBox="0 0 1920 1920"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M994.034 694.296c-18.796-27.296-49.269-27.3-68.067 0l-351.074 509.836c-18.797 27.296-7.18 49.424 25.959 49.424h718.297c33.133 0 44.757-22.125 25.959-49.424L994.034 694.296Z"
+										fill-rule="evenodd"
+									/>
+								</svg>
+							</div>
 						</button>
-					</div>
+					</section>
 				) : (
 					<div>
 						{selected.map((item) => (
@@ -114,22 +129,39 @@ function App() {
 							<div className={styles.list}>
 								{data.map((item) => (
 									<div key={item.id} className={styles.list__description}>
-										<label className={selected.some((check) => check.id === item.id) ? 'isActive' : ''}>
-												<div>
-													<input
-														className={styles.list__check}
-														type="checkbox"
-														checked={selected.some((check) => check.id === item.id)}
-														value={item.id}
-														onChange={(e) => handleChange(e.target.value)}
-													/>
-													{item.description}
+										<label className={selected.some((check) => check.id === item.id) ? `${styles.isActive}` : ''}>
+											<div>
+												<input
+													className={styles.list__check}
+													type="checkbox"
+													checked={selected.some((check) => check.id === item.id)}
+													value={item.id}
+													onChange={(e) => handleChange(e.target.value)}
+												/>
+												{item.description}
+											</div>
+											{selected.some((check) => check.id === item.id) ? (
+												<div className={styles.list__check}>
+													<svg
+														width="16px"
+														height="16px"
+														viewBox="0 0 24 24"
+														id="_24x24_On_Light_Checkmark"
+														data-name="24x24/On Light/Checkmark"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect id="view-box" width="24" height="24" fill="#141124" opacity="0" />
+														<path
+															id="Shape"
+															d="M5.341,12.247a1,1,0,0,0,1.317,1.505l4-3.5a1,1,0,0,0,.028-1.48l-9-8.5A1,1,0,0,0,.313,1.727l8.2,7.745Z"
+															transform="translate(19 6.5) rotate(90)"
+															fill="#4873FE"
+														/>
+													</svg>
 												</div>
-												{selected.some((check) => check.id === item.id) ? (
-													<div className={styles.list__check}>✔</div>
-												) : (
-													''
-												)}
+											) : (
+												''
+											)}
 										</label>
 									</div>
 								))}
