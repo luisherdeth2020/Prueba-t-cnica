@@ -28,16 +28,10 @@ function App() {
 		const character = e.target.value;
 		const characterFirstUppercase = character.charAt(0).toUpperCase() + character.slice(1);
 		if (characterFirstUppercase !== '') {
-			console.log(characterFirstUppercase);
 			const result = data.filter((item) => item.description.includes(characterFirstUppercase));
 			setData(result);
-			// setVisible(true);
 		} else {
-			// setLuis(true)
 			setData(dataList);
-			console.log(characterFirstUppercase);
-
-			// setVisible(true);
 		}
 	};
 	const handleChange = (id) => {

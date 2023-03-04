@@ -1,6 +1,5 @@
 .container {
 	border-radius: 1em;
-	/* background-color: orange; */
 	-webkit-border-radius: 1em;
 	-moz-border-radius: 1em;
 	-ms-border-radius: 1em;
@@ -9,10 +8,7 @@
 	flex-direction: column;
 	gap: 1em;
 	padding: 1em;
-	/*display: flex;
-  */ /*justify-content: center;
-  */ /*margin: 3rem 0 4rem 0;
-  */
+
 }
 
 .search__box {
@@ -48,9 +44,8 @@
 .search__button {
 	background: transparent;
 	border: none;
-	bottom: -17px;
+	bottom: 212px;
 	cursor: pointer;
-	height: 100%;
 	position: absolute;
 	right: 22px;
 	outline: none;
