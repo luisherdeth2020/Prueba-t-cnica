@@ -67,7 +67,7 @@ function App() {
 							setVisible(!visible);
 						}}
 					>
-						DESPLEGAR
+						Select your options
 					</button>
 				) : selected.length > 1 ? (
 					<div>
