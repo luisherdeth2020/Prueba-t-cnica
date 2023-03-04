@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Maven+Pro&display=swap');
 
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 body {
 	font-family: 'Maven Pro', sans-serif;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-    background-color: #eef3fa;
+	background-color: #eef3fa;
 }
 h1 {
 	font-size: 3.2em;
@@ -33,5 +38,5 @@ button {
 	-o-transition: border-color 0.25s;
 }
 button:hover {
-    border-color:#4873FE;
+	border-color: #4873fe;
 }

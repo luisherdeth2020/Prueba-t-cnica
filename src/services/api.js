@@ -1,4 +1,4 @@
-export const dataList = [
+const dataList = [
 	{
 		id: 1,
 		description: 'Install',
@@ -15,4 +15,22 @@ export const dataList = [
 		id: 4,
 		description: 'SesionEnd',
 	},
+	{
+		id: 5,
+		description: 'Install',
+	},
+	{
+		id: 6,
+		description: 'Session_Start',
+	},
+	{
+		id: 7,
+		description: 'Clan_war_video',
+	},
+	{
+		id: 8,
+		description: 'SesionEnd',
+	},
 ];
+
+export default dataList
