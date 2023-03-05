@@ -77,14 +77,29 @@
 	overflow-x: hidden;
 	height: 174px;
 }
-.container__arrow{
+.list::-webkit-scrollbar {
+	background-color: #fff;
+	scrollbar-gutter: auto;
+	width: 2vw;
+	border: 1px solid #eff2f6;
+	/* scroll-padding: 110px; */
+}
+.list::-webkit-scrollbar-thumb {
+	background-color: #c6cdd5;
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+}
+.container__arrow {
 	transform: rotate(3.142rad);
 	-webkit-transform: rotate(3.142rad);
 	-moz-transform: rotate(3.142rad);
 	-ms-transform: rotate(3.142rad);
 	-o-transform: rotate(3.142rad);
 }
-.isActiveArrow{
+.isActiveArrow {
 	transform: rotate(0);
 	-webkit-transform: rotate(0);
 	-moz-transform: rotate(0);

@@ -13,6 +13,22 @@ body {
 	height: 100vh;
 	background-color: #eef3fa;
 }
+
+/* .list::-webkit-scrollbar {
+  background-color: #6a11cb;
+  background-color: #2575fc;
+  width: 0.9rem;
+}
+.list::-webkit-scrollbar-thumb {
+  background-color: #ffe54c;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+} */
+
+
 h1 {
 	font-size: 3.2em;
 	line-height: 1.1;
