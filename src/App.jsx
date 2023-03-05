@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import dataList from './services/api';
 import styles from './assets/css/App.module.css';
+import check from './assets/img/check.svg';
+import search from './assets/img/search.svg';
+import arrow from './assets/img/arrow.svg';
 
 function App() {
 	const [data, setData] = useState(dataList);
@@ -56,18 +59,7 @@ function App() {
 							{selected[0].description}{' '}
 							<div className={styles.container__number}>
 								& {selected.length - 1 + ' MORE'}
-								<svg
-									fill="#EFF2F6"
-									width="19px"
-									height="19px"
-									viewBox="0 0 1920 1920"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M994.034 694.296c-18.796-27.296-49.269-27.3-68.067 0l-351.074 509.836c-18.797 27.296-7.18 49.424 25.959 49.424h718.297c33.133 0 44.757-22.125 25.959-49.424L994.034 694.296Z"
-										fill-rule="evenodd"
-									/>
-								</svg>
+								<img src={arrow} alt="arrow" />
 							</div>
 						</button>
 					</section>
@@ -98,14 +90,7 @@ function App() {
 						/>
 
 						<div className={styles.search__button} type="submit">
-							<svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M17 17L21 21" stroke="#EEF2F6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-								<path
-									d="M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
-									stroke="#EEF2F6"
-									strokeWidth="2"
-								/>
-							</svg>
+							<img src={search} alt="search" />
 						</div>
 						<div className={styles.list}>
 							{data.map((item) => (
@@ -123,22 +108,7 @@ function App() {
 										</div>
 										{selected.some((check) => check.id === item.id) ? (
 											<div className={styles.list__check}>
-												<svg
-													width="15px"
-													height="15px"
-													viewBox="0 0 24 24"
-													id="_24x24_On_Light_Checkmark"
-													data-name="24x24/On Light/Checkmark"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect id="view-box" width="24" height="24" fill="#141124" opacity="0" />
-													<path
-														id="Shape"
-														d="M5.341,12.247a1,1,0,0,0,1.317,1.505l4-3.5a1,1,0,0,0,.028-1.48l-9-8.5A1,1,0,0,0,.313,1.727l8.2,7.745Z"
-														transform="translate(19 6.5) rotate(90)"
-														fill="#4873FE"
-													/>
-												</svg>
+												<img src={check} alt="check" />
 											</div>
 										) : (
 											''
