@@ -80,7 +80,7 @@
 .list::-webkit-scrollbar {
 	background-color: #fff;
 	scrollbar-gutter: auto;
-	width: 2vw;
+	width: 1em;
 	border: 1px solid #eff2f6;
 	/* scroll-padding: 110px; */
 }
