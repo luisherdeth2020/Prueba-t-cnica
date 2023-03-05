@@ -34,45 +34,47 @@ function App() {
 		}
 	};
 
+	const handleArrowClick = () => {
+		setVisible(!visible);
+	};
 	const noItemSelected = selected.length === 0;
 	const moreOneItemSelected = selected.length > 1;
 	return (
 		<div className="App">
 			<div className={styles.container}>
 				{noItemSelected ? (
-					<button
-						className={styles.container__btn}
-						onClick={() => {
-							setVisible(!visible);
-						}}
-					>
+					<button className={styles.container__btn} onClick={handleArrowClick}>
 						Select your options
+						<img
+							src={arrow}
+							className={visible ? `${styles.isActiveArrow}` : `${styles.container__arrow}`}
+							alt="arrow"
+						/>
 					</button>
 				) : moreOneItemSelected ? (
 					<section>
-						<button
-							className={styles.container__btn}
-							onClick={() => {
-								setVisible(!visible);
-							}}
-						>
+						<button className={styles.container__btn} onClick={handleArrowClick}>
 							{selected[0].description}{' '}
 							<div className={styles.container__number}>
 								& {selected.length - 1 + ' MORE'}
-								<img src={arrow} alt="arrow" />
+								<img
+									src={arrow}
+									className={visible ? `${styles.isActiveArrow}` : `${styles.container__arrow}`}
+									alt="arrow"
+								/>
 							</div>
 						</button>
 					</section>
 				) : (
 					<div>
 						{selected.map((item) => (
-							<button
-								className={styles.container__btn}
-								onClick={() => {
-									setVisible(!visible);
-								}}
-							>
+							<button className={styles.container__btn} onClick={handleArrowClick}>
 								<div key={item.id}>{item.description}</div>
+								<img
+									src={arrow}
+									className={visible ? `${styles.isActiveArrow}` : `${styles.container__arrow}`}
+									alt="arrow"
+								/>
 							</button>
 						))}
 					</div>
@@ -88,7 +90,6 @@ function App() {
 							aria-label="Search"
 							onChange={onInputChange}
 						/>
-
 						<div className={styles.search__button} type="submit">
 							<img src={search} alt="search" />
 						</div>
