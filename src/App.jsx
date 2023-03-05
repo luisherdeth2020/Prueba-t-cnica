@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import dataList from './services/api';
+import ImgComponente from './components/ImgComponent';
 import styles from './assets/css/App.module.css';
 import check from './assets/img/check.svg';
 import search from './assets/img/search.svg';
@@ -40,18 +41,14 @@ function App() {
 
 	const noItemSelected = selected.length === 0;
 	const moreOneItemSelected = selected.length > 1;
-	
+
 	return (
 		<div className="App">
 			<div className={styles.container}>
 				{noItemSelected ? (
 					<button className={styles.container__btn} onClick={handleArrowClick}>
 						Select your options
-						<img
-							src={arrow}
-							className={visible ? `${styles.isActiveArrow}` : `${styles.container__arrow}`}
-							alt="arrow"
-						/>
+						<ImgComponente src={arrow} active={visible} />
 					</button>
 				) : moreOneItemSelected ? (
 					<section>
@@ -59,11 +56,7 @@ function App() {
 							{selected[0].description}{' '}
 							<div className={styles.container__number}>
 								& {selected.length - 1 + ' MORE'}
-								<img
-									src={arrow}
-									className={visible ? `${styles.isActiveArrow}` : `${styles.container__arrow}`}
-									alt="arrow"
-								/>
+								<ImgComponente src={arrow} active={visible} />
 							</div>
 						</button>
 					</section>
@@ -72,11 +65,7 @@ function App() {
 						{selected.map((item) => (
 							<button className={styles.container__btn} onClick={handleArrowClick}>
 								<div key={item.id}>{item.description}</div>
-								<img
-									src={arrow}
-									className={visible ? `${styles.isActiveArrow}` : `${styles.container__arrow}`}
-									alt="arrow"
-								/>
+								<ImgComponente src={arrow} active={visible} />
 							</button>
 						))}
 					</div>
