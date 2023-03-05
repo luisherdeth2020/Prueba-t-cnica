@@ -37,8 +37,10 @@ function App() {
 	const handleArrowClick = () => {
 		setVisible(!visible);
 	};
+
 	const noItemSelected = selected.length === 0;
 	const moreOneItemSelected = selected.length > 1;
+	
 	return (
 		<div className="App">
 			<div className={styles.container}>
