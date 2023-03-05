@@ -64,7 +64,9 @@
 	color: #213547;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	width: 256px;
+	height:50px;
 }
 
 .isActive {
@@ -82,7 +84,6 @@
 	scrollbar-gutter: auto;
 	width: 1em;
 	border: 1px solid #eff2f6;
-	/* scroll-padding: 110px; */
 }
 .list::-webkit-scrollbar-thumb {
 	background-color: #c6cdd5;
